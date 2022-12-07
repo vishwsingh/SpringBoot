@@ -11,5 +11,8 @@ public interface CourseService {
 
    // List<Course> getAllCourses();
 
+    Course addCourse(Course course);
     Course getCourseById(int courseId);
+    Course updateCourse(Course course);
+    String deleteCourse(int courseId);
 }

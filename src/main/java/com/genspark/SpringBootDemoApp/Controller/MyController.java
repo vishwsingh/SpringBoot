@@ -31,4 +31,19 @@ public class MyController {
     public Course getCourse(@PathVariable String courseID) {
             return this.courseService.getCourseById(Integer.parseInt(courseID));
     }
+
+    @PostMapping("/courses")
+    public Course addCourse(@RequestBody Course course) {
+        return this.courseService.addCourse(course);
+    }
+
+    @PutMapping("/courses")
+    public Course updateCourse(@RequestBody Course course) {
+        return this.courseService.updateCourse(course);
+    }
+
+    @DeleteMapping("/courses/{courseId}")
+    public String deleteCourse(@PathVariable String courseId) {
+        return this.courseService.deleteCourse(Integer.parseInt(courseId));
+    }
 }
